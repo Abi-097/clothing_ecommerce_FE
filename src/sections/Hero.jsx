@@ -3,6 +3,7 @@ import banner4 from "../assets/banner4.jpg";
 import { useDarkMode } from "../components/DarkModeContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Carousel from "../components/Carousel";
 
 const Hero = () => {
   useEffect(() => {
@@ -29,14 +30,25 @@ const Hero = () => {
         >
           Chick Christmas
         </h1>
-        <h1 data-aos="zoom-in" className="lg:text-7xl text-6xl text-black  px-8 py-4 font-bold dark:text-white capitalize">Effortless <br/>Glamour For <br/> Every Occasions</h1>
-        <button data-aos="zoom-in" className="bg-black px-10 py-4 font-semibold text-white text-lg rounded-lg mt-8 hover:bg-white dark:text-black hover:text-black cursor-pointer">Shop Now</button>
+        <h1
+          data-aos="zoom-in"
+          className="lg:text-7xl text-6xl text-black  px-8 py-4 font-bold dark:text-white capitalize"
+        >
+          Effortless <br />
+          Glamour For <br /> Every Occasions
+        </h1>
+        <button
+          data-aos="zoom-in"
+          className="bg-black px-10 py-4 font-semibold text-white text-lg rounded-lg mt-8 hover:bg-white dark:text-black hover:text-black cursor-pointer"
+        >
+          Shop Now
+        </button>
       </div>
 
       <div id="image-box" className="lg:w-[40%] w-full">
-        <img data-aos="zoom-in" src={banner4} alt="banner4" className="bg-cover bg-center"/>
+        <Carousel />
+        {/* <img data-aos="zoom-in" src={banner4} alt="banner4" className="bg-cover bg-center"/> */}
       </div>
-      
     </section>
   );
 };

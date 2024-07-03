@@ -88,8 +88,58 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div data-aos="zoom-in " id="menus section" className="w-full pb-5 flex lg:justify-center justify-end items-center sticky top-0 left-0 h-fit bg-white dark:bg-black">
-        
+      <div
+        data-aos="zoom-in "
+        id="menus section"
+        className="w-full pb-5 flex lg:justify-center justify-end items-center sticky top-0 left-0 h-fit bg-white dark:bg-black"
+      >
+        <ul className="lg:flex justify-center items-center gap-10 hidden">
+          {navItems.map(({ link, path }) => (
+            <Link
+              key={path}
+              className="text-black uppercase font-semibold cursor-pointer p-3 rounded-lg hover:bg-black dark:hover:bg-white dark:hover:text-black hover:text-white dark:text-white"
+              to={path}
+              spy={true}
+              offset={-100}
+              smooth={true}
+            >
+              {link}
+            </Link>
+          ))}
+        </ul>
+        {/* mobile menu */}
+        <div
+          className="flex justify-center items-center lg:hidden mt-5"
+          onClick={toggleMenu}
+        >
+          <div>
+            {isMenuOpen ? (
+              <FaXmark className="text-black text-3xl dark:text-white cursor-pointer" />
+            ) : (
+              <FaBars className="text-black text-3xl dark:text-white cursor-pointer" />
+            )}
+          </div>
+        </div>
+        <div
+          className={`${
+            isMenuOpen ? "flex" : "hidden"
+          } w-full h-fit bg-slate-800 p-4 absolute top-[60px] left-0`}
+        >
+          <ul className="flex flex-col justify-center items-center gap-2 w-full">
+            {navItems.map(({ link, path }) => (
+              <Link
+                key={path}
+                className="text-white uppercase font-semibold cursor-pointer p-3 rounded-lg hover:bg-yellow-500 hover:text-black w-full text-center"
+                to={path}
+                spy={true}
+                offset={-100}
+                smooth={true}
+              >
+                {link}
+              </Link>
+            ))}
+          </ul>
+        </div>
       </div>
     </nav>
   );

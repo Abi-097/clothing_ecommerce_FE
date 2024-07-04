@@ -6,7 +6,7 @@ import coat4 from "../assets/coat4.jpg";
 import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { MdKeyboardArrowLeft,MdKeyboardArrowRight  } from "react-icons/md";
 const slideImages = [coat1, coat2, coat3, coat4];
 const Carousel = () => {
   const [curr, setCurr] = useState(0);
@@ -47,13 +47,13 @@ const Carousel = () => {
           onClick={prev}
           className="rounded-full shadow bg-slate-300 text-gray-800 hover:bg-white"
         >
-          <FaCircleArrowLeft size={40} data-aos="zoom-in" />
+          <MdKeyboardArrowLeft size={40} data-aos="zoom-in" />
         </button>
         <button
           onClick={next}
           className="rounded-full shadow bg-slate-300 text-gray-800 hover:bg-white"
         >
-          <FaCircleArrowRight size={40} data-aos="zoom-in" />
+          <MdKeyboardArrowRight size={40} data-aos="zoom-in" />
         </button>
       </div>
       <div className="absolute bottom-4 right-0 left-0">

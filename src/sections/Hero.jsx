@@ -37,12 +37,15 @@ const Hero = () => {
           Effortless <br />
           Glamour For <br /> Every Occasions
         </h1>
+        <div className="px-8">
         <button
           data-aos="zoom-in"
           className="bg-black px-10 py-4 font-semibold text-white text-lg rounded-lg mt-8 hover:bg-white dark:text-black hover:text-black cursor-pointer"
         >
           Shop Now
         </button>
+        </div>
+        
       </div>
 
       <div id="image-box" className="lg:w-[40%] w-full">

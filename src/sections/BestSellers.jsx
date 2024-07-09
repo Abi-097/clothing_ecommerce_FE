@@ -86,14 +86,12 @@ const BestSellers = () => {
               className="flex flex-col justify-center items-start gap-2 bg-white rounded-xl dark:bg-black"
             >
               <div id="image-box" className="relative cursor-pointer">
-              
                 <img
                   src={item.image}
                   alt={item.image}
                   className="w-[700px] h-[250px] rounded-xl"
                 />
-            
-               
+
                 <div
                   id="icon-box"
                   className="flex-col justify-center items-center gap-1 absolute top-3 right-3 hidden"

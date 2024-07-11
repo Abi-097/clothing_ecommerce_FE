@@ -66,7 +66,7 @@ export const bestsellers = [
   },
 ];
 
-export const newarrivals = [
+export const newArrivals = [
   {
     image: item1,
     category: "Clothes",
@@ -144,7 +144,7 @@ export const blogs = [
   },
 ];
 
-export const footericons = [
+export const footerIcons = [
   {
     icon: FaTruck,
     title: "Free Shipping",

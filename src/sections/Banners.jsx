@@ -31,6 +31,32 @@ const Banners = () => {
         >
           upto 60% off
         </h1>
+        <h1
+          data-aos="zoom-in"
+          data-aos-delay="400"
+          className="lg:text-5xl text-4xl font-bold text-black dark:text-white line-clamp-5 text-center"
+        >
+          UNLEASH YOUR STYLE <br /> POTENTIAL WITH OUR <br />
+          SPECTACULAR CLOTHING SALE
+        </h1>
+        <p
+          data-aos="zoom-in"
+          data-aos-delay="600"
+          className="text-center text-xl text-slate-700 dark:text-white"
+        >
+          A good example of a paragraph contains a topic sentence, details and a
+          conclusion. 'There are many different kinds of animals that live in
+          China. Tigers and leopards are animals that live in China's forests in
+          the north. In the jungles, monkeys swing in the trees and elephants
+          walk through the brush.
+        </p>
+        <button
+          data-aos="zoom-in"
+          data-aos-delay="800"
+          className="px-10 py-4 text-lg text-white dark:bg-white dark:text-black bg-black rounded-md transform hover:scale-105 transition-transform duration-300 font-semibold mt-5 "
+        >
+          Shop Now
+        </button>
       </div>
     </section>
   );

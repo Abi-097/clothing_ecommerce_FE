@@ -14,7 +14,13 @@ import blog5 from "../assets/blog5.jpg";
 import blog6 from "../assets/blog6.jpg";
 import { FaTruck, FaIdCardAlt, FaHeadphones } from "react-icons/fa";
 import { FaCreditCard } from "react-icons/fa6";
-
+import logo1 from "../assets/clients/logo1.png";
+import logo2 from "../assets/clients/logo2.png";
+import logo3 from "../assets/clients/logo3.png";
+import logo4 from "../assets/clients/logo4.png";
+import logo5 from "../assets/clients/logo5.png";
+import logo6 from "../assets/clients/logo6.png";
+import logo7 from "../assets/clients/logo7.png";
 export const bestsellers = [
   {
     image: item1,
@@ -164,5 +170,36 @@ export const footerIcons = [
     icon: FaHeadphones,
     title: "Online Support",
     para: "24 hours a day, 7 days a week",
+  },
+];
+
+export const clientImages = [
+  {
+    image: logo1,
+    delay: 200,
+  },
+  {
+    image: logo2,
+    delay: 300,
+  },
+  {
+    image: logo3,
+    delay: 400,
+  },
+  {
+    image: logo4,
+    delay: 500,
+  },
+  {
+    image: logo5,
+    delay: 600,
+  },
+  {
+    image: logo6,
+    delay: 700,
+  },
+  {
+    image: logo7,
+    delay: 800,
   },
 ];

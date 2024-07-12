@@ -1,66 +1,70 @@
-import { AiFillInstagram, AiOutlineFullscreen } from "react-icons/ai";
-import footerLogo from "../assets/clients/footer-logo.svg";
-import { footerIcons } from "../components/data";
-import { FaFacebook, FaLinkedin, FaTwitter, FaArrowUp } from "react-icons/fa";
-import { FaArrowRightLong } from "react-icons/fa6";
-import { FaMoon, FaSun } from "react-icons/fa";
-import { useDarkMode } from "../components/DarkModeContext";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { Link } from "react-scroll";
 import { useEffect } from "react";
+import ItemsContainer from "../components/Footer/ItemsContainer";
+import SocialIcons from "../components/Footer/SocialIcons";
+import { Icons } from "../components/data";
+import { useDarkMode } from "../components/DarkModeContext";
+import { FaArrowUp, FaMoon, FaSun } from "react-icons/fa";
+import { Link } from "react-scroll";
 const Footer = () => {
   const { darkMode, toggleDarkMode } = useDarkMode();
-
-  useEffect(() => {
-    AOS.init({
-      offset: 200,
-      duration: 800,
-      easing: "ease-in-sine",
-      delay: 100,
-    });
-  }, []);
   return (
     <>
-      <section
-        className={`${
-          darkMode ? "dark bg-black" : "light bg-white"
-        } w-full lg:px-20 px-10 lg:py-20 flex flex-col justify-center items-center gap-6`}
-      >
-        <div
-          data-aos="zoom-in"
-          id="icon-boxes"
-          className="flex justify-between lg:items-center items-start lg:flex-row flex-col w-full gap-6"
-        >
-          {footerIcons.map((item, index) => (
-            <div
-              key={index}
-              className="flex justify-center items-center gap-3 "
+      <footer className="bg-gray-900 text-white">
+        <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 bg-[#ffffff19] py-7">
+          <h1
+            className="lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal font-semibold
+         md:w-2/5"
+          >
+            <span className="text-teal-400">Free</span> until you're ready to
+            launch
+          </h1>
+          <div>
+            <input
+              type="text"
+              placeholder="Enter Your ph.no"
+              className="text-gray-800
+           sm:w-72 w-full sm:mr-5 mr-1 lg:mb-0 mb-4 py-2.5 rounded px-2 focus:outline-none"
+            />
+            <button
+              className="bg-teal-400 hover:bg-teal-500 duration-300 px-5 py-2.5 font-[Poppins]
+           rounded-md text-white md:w-auto w-full"
             >
-              <div
-                id="icon-box"
-                className="border-2 dark:text-white border-slate-300 rounded-full p-4 hover:bg-black hover:text-white cursor-pointer"
-              >
-                {item.icon && <item.icon className="w-[25px] h-[25px]" />}{" "}
-              </div>
-              <div className="flex flex-col justify-center items-start gap-1">
-                <h1 className="text-2xl text-black font-semibold dark:text-white">
-                  {item.title}
-                </h1>
-                <h1 className="text-[17px] text-slate-600 dark:text-white">
-                  {item.para}
-                </h1>
-              </div>
-            </div>
-          ))}
+              Request Code
+            </button>
+          </div>
         </div>
-      </section>
-      <section
-        id="main-footer"
-        className={`${
-          darkMode ? "dark bg-[#19191a] " : "light bg-black"
-        } w-full text-white lg:px-10 lg:py-10 grid lg:grid-cols-5 grid-cols-1 justify-between items-start gap-14`}
-      ></section>
+        <ItemsContainer />
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10
+      text-center pt-2 text-gray-400 text-sm pb-8"
+        >
+          <span>© 2020 Appy. All rights reserved.</span>
+          <span>Terms · Privacy Policy</span>
+          <SocialIcons Icons={Icons} />
+        </div>
+      </footer>
+      <div>
+        {/* dark mode button */}
+        <button
+          onClick={toggleDarkMode}
+          className="flex items-center p-4 rounded-full bg-gray-900 fixed top-[700px] right-[30px]"
+        >
+          {darkMode ? (
+            <FaMoon size={30} className="text-white" />
+          ) : (
+            <FaSun size={30} className="text-white" />
+          )}
+        </button>
+      </div>
+      {/* scroll button */}
+      <div
+        id="icon-box"
+        className="bg-yellow-500 text-black p-3 rounded-full hover:bg-white cursor-pointer fixed lg:bottom-6 right-6 bottom-6"
+      >
+        <Link to="hero" spy={true} offset={-100} smooth={true}>
+          <FaArrowUp className="w-[35px] h-[35px]" />{" "}
+        </Link>
+      </div>
     </>
   );
 };
